@@ -1,0 +1,46 @@
+body {
+	min-height: 100vh;
+	display: grid;
+	grid-template-areas:
+		'header header header'
+		'nav article aside'
+		'footer footer footer';
+	grid-template-columns: repeat(1fr, 3);
+	grid-template-rows: 100px 1fr 100px;
+}
+
+.header {
+	background-color: #f55;
+	border-radius: 2rem;
+	grid-area: header;
+}
+
+.nav {
+	background-color: #55f;
+	border-radius: 2rem;
+	grid-area: nav;
+}
+
+.article {
+	position: relative;
+	background-color: #ff5;
+	grid-area: article;
+}
+
+.article__element {
+	width: 100%;
+	height: 50%;
+	text-align: center;
+}
+
+.aside {
+	background-color: #5ff;
+	border-radius: 2rem;
+	grid-area: aside;
+}
+
+.footer {
+	background-color: #f5f;
+	border-radius: 2rem;
+	grid-area: footer;
+}
