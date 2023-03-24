@@ -1,0 +1,30 @@
+:root {
+	font-size: 16px;
+	--dark-blue: #1f5676;
+	--orange: #fd6704;
+}
+
+@font-face {
+	font-family: 'Basston Script';
+	src: url('../fonts/Basston_Script.ttf');
+}
+
+@font-face {
+	font-family: 'Batang Regular';
+	src: url('../fonts/Batang_Regular.ttf');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

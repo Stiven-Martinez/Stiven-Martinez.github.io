@@ -1,0 +1,140 @@
+.main {
+	padding: 3rem 1.5rem;
+	display: grid;
+	justify-items: center;
+	gap: 6rem;
+}
+
+.brand {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+}
+
+.brand > img:nth-child(1) {
+	max-width: 40%;
+}
+
+.brand > img:nth-child(2) {
+	max-width: 50%;
+}
+
+.brand > img:nth-child(3) {
+	max-width: 60%;
+}
+
+.dishes {
+	display: grid;
+	align-items: center;
+	gap: 3rem;
+}
+
+.dishes__item {
+	--img-width: 11rem;
+	--element-gap: 0.75rem;
+
+	max-width: 100%;
+	padding: var(--element-gap);
+	border-radius: var(--img-width);
+	border: 4px solid var(--dark-blue);
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: var(--element-gap);
+	align-items: center;
+}
+
+.dish-img {
+	width: var(--img-width);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-size: cover;
+}
+
+.dish-1 {
+	background-image: url('../img/camaron_ceviche.jpg');
+	background-position: 20% center;
+}
+
+.dish-2 {
+	background-image: url('../img/camaron.jpg');
+}
+
+.dish-3 {
+	background-image: url('../img/langos.jfif');
+	background-position: center;
+}
+
+.dish-4 {
+	background-image: url('../img/langost.jfif');
+	background-position: center;
+}
+
+.dish-5 {
+	background-image: url('../img/pescado_frito.jpg');
+	background-position: 30% center;
+}
+
+.dish-6 {
+	background-image: url('../img/pulpo.jfif');
+}
+
+.dish-content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.dish-name {
+	margin: 0;
+	font-family: 'Arizonia', cursive;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.dish-description {
+	margin: 0;
+	font-family: 'Batang', serif;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.dish-price {
+	margin: 0;
+	color: var(--orange);
+	font-family: 'Arial', sans-serif;
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.return {
+	display: block;
+	padding: 0.5rem 1rem;
+	position: relative;
+	color: var(--dark-blue);
+	font-family: 'Arial Rounded MT', sans-serif;
+	font-size: 2rem;
+	overflow: hidden;
+	transition: color 0.25s;
+}
+
+.return:hover {
+	color: #fff;
+}
+
+.return::before {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: var(--dark-blue);
+	transform: translateY(100%);
+	transition: transform 0.25s;
+
+	content: '';
+}
+
+.return:hover::before {
+	transform: translateY(0);
+}

@@ -1,0 +1,151 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #a0caec;
+	min-height: 100vh;
+	min-height: 100dvh;
+	overflow-x: hidden;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin: 1rem 2rem;
+}
+
+.nav__image {
+	width: 200px;
+}
+
+.nav__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.nav__item {
+	display: inline-block;
+	font-size: 16px;
+	font-family: 'Palatino Linotype';
+}
+
+.nav__item > a {
+	display: block;
+	padding: 1.5rem 10px;
+	text-decoration: none;
+	color: #333;
+	transition: all 200ms linear;
+}
+
+.nav__item > a:focus,
+.nav__item > a:hover {
+	background-color: #333;
+	color: #eee;
+}
+
+.main__image {
+	width: 100%;
+}
+
+.main__highlight {
+	font-family: 'Bradley Hand ITC', serif;
+	color: #696969;
+}
+
+.media {
+	background-color: darkblue;
+	color: #fff;
+	text-align: center;
+	margin-top: 200px;
+}
+
+.media__red {
+	width: 70px;
+}
+
+#productos {
+	width: 102%;
+	height: auto;
+	background-color: #fff;
+	margin-left: -10px;
+}
+
+.texto_imagen {
+	background-color: #a0caec;
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h2 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 20px;
+	color: #f60;
+}
+.minis_img {
+	width: 500px;
+	height: 350px;
+}
+
+.texto_productos {
+	text-align: justify;
+	margin: 25px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.news_ul {
+	text-align: justify;
+	margin: 40px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 30px;
+	list-style-type: none;
+}
+
+.img_C {
+	float: left;
+	padding-top: 23px;
+	padding-right: 30px;
+}
+
+.contacto ul {
+    list-style: none;
+}
+
+.contacto li {
+    display: flex;
+    align-items: center;
+}
+
+.contacto__icon {
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.p_C {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 20px;
+}
+
+.li_C {
+	padding-top: 60px;
+}
+
+.megaLink:hover{
+    background-color: #333;
+	color: #eee;
+}
+
+.megaLink{
+    display: block;
+	padding: 1.5rem 10px;
+	text-decoration: none;
+	color: #333;
+	transition: all 200ms linear;
+}
