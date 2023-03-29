@@ -1,0 +1,12 @@
+.w3-row-padding {
+	padding: 1.25rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.25rem;
+}
+
+.w3-third {
+	padding: 0.75rem;
+	background-color: #fffd8f;
+	border: 2px solid #e58fff;
+}
