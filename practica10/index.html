@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/index.css" />
+		<link rel="stylesheet" href="styles/menu-icon.css" />
+		<title>Práctica 10</title>
+	</head>
+	<body>
+		<header>
+			<nav class="menu" id="menu">
+				<ul>
+					<li><a href="#planes">Planes</a></li>
+					<li><a href="#estrenos">Estrenos</a></li>
+					<li><a href="#caracteristicas">Características</a></li>
+					<li><a href="#registrarse">Registrarse</a></li>
+				</ul>
+			</nav>
+			<div class="menu-icon" id="menu-icon">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</header>
+		<main>
+			<div class="banner">
+				<h1>Página épica de servicio de streaming épico</h1>
+			</div>
+			<section id="planes">
+				<h2>Elige tu plan</h2>
+				<div class="contenedor-planes">
+					<div class="plan">
+						<h3>1 mes</h3>
+						<p>$179</p>
+						<p class="space">&ThinSpace;</p>
+						<button>Elegir plan</button>
+					</div>
+					<div class="plan">
+						<h3>3 meses</h3>
+						<p>$399</p>
+						<p>Igual a $133 al mes</p>
+						<button>Elegir plan</button>
+					</div>
+					<div class="plan">
+						<h3>12 meses</h3>
+						<p>$1,249</p>
+						<p>Igual a $104.08 al mes</p>
+						<button>Elegir plan</button>
+					</div>
+				</div>
+			</section>
+			<section id="estrenos">
+				<h2>Estrenos</h2>
+				<div class="peliculas">
+					<div class="pelicula"></div>
+					<div class="pelicula"></div>
+					<div class="pelicula"></div>
+				</div>
+			</section>
+			<section id="caracteristicas">
+				<h2>Características</h2>
+				<div class="visor-caracteristica">
+					<div class="contenedor-caracteristicas">
+						<p class="caracteristica">
+							Personaliza tu experiencia creando hasta 5 perfiles distintos por
+							cuenta
+						</p>
+						<p class="caracteristica">
+							Descarga tus historias preferidas para disfrutar offline donde
+							quieras
+						</p>
+						<p class="caracteristica">
+							Crea perfiles para los pequeños con contenido de acuerdo a su edad
+						</p>
+						<p class="caracteristica">
+							Agrega tus títulos favoritos para verlos cuando quieras
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="registrarse">
+				<h2>Registrarse</h2>
+				<form>
+					<label for="nombre">Nombre</label>
+					<input type="text" id="nombre" required />
+
+					<label for="correo">Correo</label>
+					<input type="email" id="correo" required />
+
+					<button type="submit">Enviar</button>
+				</form>
+			</section>
+		</main>
+
+		<script src="scripts/menu-icon.js"></script>
+	</body>
+</html>

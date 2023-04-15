@@ -1,0 +1,279 @@
+:root {
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+	color-scheme: dark;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	background-color: #111;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	padding: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.125s;
+}
+
+button:hover {
+	background-color: #777;
+}
+
+button:active {
+	background-color: #6d6c6c;
+}
+
+h1 {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 4rem;
+}
+
+h2 {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+.menu {
+	position: fixed;
+	width: 100vw;
+	background-color: #555;
+	z-index: 1;
+	transition: left 0.5s;
+}
+
+.menu ul {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0 0.75rem;
+	font-size: 1.25rem;
+	list-style-type: none;
+}
+
+.menu a {
+	display: block;
+	font-size: 1rem;
+	text-align: center;
+	padding: 1rem 0.75rem;
+	color: inherit;
+	transition: background-color 0.25s;
+}
+
+.menu a:hover,
+.menu a:focus {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner,
+section {
+	padding: 0 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+section {
+	padding: 3rem 0;
+	flex-direction: column;
+}
+
+.contenedor-planes {
+	min-width: 50vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.plan {
+	min-width: 250px;
+	height: 350px;
+	background-color: #ddd;
+	color: #000;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.plan button {
+	border-radius: 4rem;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+}
+
+.plan h3 {
+	font-size: 1.6rem;
+}
+
+.plan p:nth-of-type(1) {
+	font-size: 3rem;
+}
+
+.space {
+	user-select: none;
+}
+
+.peliculas {
+	min-width: 40vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.pelicula {
+	position: relative;
+	min-width: 250px;
+	min-height: 400px;
+	border-radius: 1rem;
+	background-size: cover;
+	background-position: 0 center;
+	background-repeat: no-repeat;
+	transition: background-position 0.25s;
+	overflow: hidden;
+}
+
+.pelicula:hover {
+	cursor: pointer;
+	background-position: 100% center;
+}
+
+.pelicula:nth-of-type(1) {
+	background-image: url('https://www.latercera.com/resizer/JzHhj0HjOVLt-5SYbHUSz2mzNUk=/800x0/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/ZPEQXUEQKFELNAMFUTACTVA6NY.jpeg');
+}
+
+.pelicula:nth-of-type(2) {
+	background-image: url('https://m.media-amazon.com/images/M/MV5BNDIwYjVjMDMtOGYxMy00ZTRiLWE0YzktMjIwYmNhOGE4NGQ4XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UX1000_.jpg');
+}
+
+.pelicula:nth-of-type(3) {
+	background-image: url('https://s3.amazonaws.com/static.rogerebert.com/uploads/movie/movie_poster/beau-is-afraid-2023/large_beau-is-afraid-movie-poster-2023.jpg');
+}
+
+.pelicula::before {
+	position: absolute;
+	inset: 0;
+	background-image: linear-gradient(to top, #000, #0004 50%, transparent);
+	z-index: 0;
+	content: '';
+}
+
+.visor-caracteristica {
+	min-width: 40vw;
+	max-width: 70vw;
+	background-color: #333;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.contenedor-caracteristicas {
+	position: relative;
+	width: 400%;
+	min-height: 250px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	animation-name: moverTarjeta;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes moverTarjeta {
+	0%,
+	20% {
+		left: 0;
+	}
+
+	25%,
+	45% {
+		left: -100%;
+	}
+
+	50%,
+	70% {
+		left: -200%;
+	}
+
+	75%,
+	100% {
+		left: -300%;
+	}
+}
+
+.caracteristica {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 1.2rem;
+}
+
+form {
+	min-width: 40vw;
+	padding: 3rem;
+	background-color: #555;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+input {
+	font-size: 1rem;
+	font-family: 'Montserrat';
+	padding: 0.5rem;
+}
+
+.menu-mobile ul {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 0;
+	padding: 0 0.75rem;
+	font-size: 1.25rem;
+	list-style-type: none;
+}
+
+.menu-mobile a {
+	width: 100vw;
+}
+
+.hide {
+	left: -100vw;
+}
+
+.show {
+	left: 0;
+}
+
+@media (prefers-reduced-motion) {
+	:root {
+		scroll-behavior: auto;
+	}
+}
