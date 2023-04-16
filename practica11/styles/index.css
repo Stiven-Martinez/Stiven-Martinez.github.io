@@ -7,6 +7,9 @@
 	--light-blue--hover: #a7bef0;
 	--dark-blue: #10263f;
 	--green: #56e669;
+	--green--hover: #41db55;
+	--form--valid: #7be489;
+	--form--invalid: #e47b7b;
 
 	scroll-behavior: smooth;
 }
@@ -46,6 +49,7 @@ body {
 	max-width: 100vw;
 	display: grid;
 	justify-content: center;
+	overflow-x: hidden;
 }
 
 section {
@@ -69,8 +73,9 @@ button {
 	color: #fff;
 	border: none;
 	border-radius: 0.5rem;
-	padding: 1rem;
+	padding: 1rem 2rem;
 	cursor: pointer;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 .card {
@@ -78,6 +83,7 @@ button {
 	border-radius: 0.5rem;
 	display: grid;
 	justify-content: center;
+	justify-items: center;
 	align-items: center;
 	text-align: center;
 	gap: 1.5rem;

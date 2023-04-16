@@ -1,0 +1,46 @@
+.contacto-grid {
+	margin: 3rem 0;
+}
+
+.contacto-grid input,
+.contacto-grid textarea {
+	border: none;
+	outline: none;
+	box-shadow: -2px 2px 4px #000a;
+	padding: 1rem;
+
+	transition: box-shadow 0.25s;
+}
+
+.contacto-grid textarea {
+	resize: none;
+}
+
+.contacto-grid input:invalid,
+.contacto-grid textarea:invalid {
+	box-shadow: 2px 2px 4px var(--form--invalid);
+}
+
+.contacto-grid input:valid,
+.contacto-grid textarea:valid {
+	box-shadow: 2px 2px 4px var(--form--valid);
+}
+
+.contacto-grid input:hover,
+.contacto-grid textarea:hover {
+	box-shadow: -2px 2px 4px #000a;
+}
+
+.contacto-grid input:focus,
+.contacto-grid textarea:focus {
+	box-shadow: -2px 2px 4px #000a;
+}
+
+.contacto-grid button {
+	background-color: var(--green);
+	transition: background-color 0.125s;
+}
+
+.contacto-grid button:hover {
+	background-color: var(--green--hover);
+}

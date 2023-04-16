@@ -27,21 +27,21 @@ main {
 	grid-template-areas:
 		'img    nombre desc'
 		'precio boton  .';
-	justify-content: space-between;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: start;
 }
 
 .oferta img {
 	grid-area: img;
+	min-width: 150px;
 }
 
 .oferta h3 {
 	grid-area: nombre;
-	margin: 0 1rem;
 }
 
 .oferta p:nth-of-type(1) {
 	grid-area: desc;
-	margin: 0 1rem;
 }
 
 .oferta p:nth-of-type(2) {
@@ -52,11 +52,40 @@ main {
 	grid-area: boton;
 }
 
-@media (max-width: 800px) {
+.testimonio {
+	grid-template-areas:
+		'nombre comentario'
+		'img    comentario';
+	grid-template-columns: min-content 1fr;
+}
+
+.testimonio h3 {
+	grid-area: nombre;
+}
+
+.testimonio img {
+	grid-area: img;
+	max-width: 150px;
+}
+
+.testimonio p {
+	grid-area: comentario;
+}
+
+@media (max-width: 850px) {
 	.oferta {
 		grid-template-areas:
 			'nombre nombre nombre'
 			'img    desc   .'
-			'boton  precio .';
+			'precio boton .';
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.testimonio {
+		grid-template-areas:
+			'img'
+			'nombre'
+			'comentario';
+		grid-template-columns: 1fr;
 	}
 }
