@@ -1,0 +1,32 @@
+header {
+	background-color: var(--dark-blue);
+	color: #fff;
+	font-family: 'Fira Sans', sans-serif;
+	position: fixed;
+	top: 0;
+	padding: 1rem;
+	width: 100vw;
+	width: 100dvw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow-x: scroll;
+}
+
+header img {
+	max-width: 30px;
+}
+
+.menu {
+	margin: 0 2rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.menu a {
+	transition: color 0.125s;
+}
+
+.menu a:hover {
+	color: var(--light-blue);
+}
