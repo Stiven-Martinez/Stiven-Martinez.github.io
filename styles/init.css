@@ -1,0 +1,46 @@
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #555;
+}
+
+::-webkit-scrollbar-thumb {
+	background-image: radial-gradient(circle at center, gold, orange);
+	border-radius: 5px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: 'Nabla', cursive;
+	text-align: center;
+	font-size: clamp(4rem, 5vw, 6rem);
+	user-select: none;
+}
+
+main {
+	padding: 0 1rem;
+}
+
+.title {
+	transition: transform 1s, opacity 1.5s;
+}
+
+.title--hidden {
+	opacity: 0;
+	transform: translateY(-100%);
+}
+
+.title--visible {
+	opacity: 1;
+	transform: translateY(0);
+}

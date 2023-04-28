@@ -1,0 +1,67 @@
+body {
+	background-color: #222;
+	color: #eee;
+}
+
+.hero {
+	min-height: 100vh;
+	min-height: 100svh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	min-height: 100vh;
+	min-height: 100svh;
+	padding: 0 2rem;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	font-family: 'Rajdhani', sans-serif;
+	font-size: clamp(1rem, 5vw, 2rem);
+	letter-spacing: 0.5rem;
+	overflow: hidden;
+}
+
+section:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.img {
+	max-width: 100px;
+}
+
+.img,
+.subtitle {
+	transition: transform 1s, opacity 1.5s;
+}
+
+.img--hidden,
+.subtitle--hidden {
+	opacity: 0;
+}
+
+section:nth-child(even) .img--hidden,
+section:nth-child(even) .subtitle--hidden {
+	transform: translateX(100%);
+}
+
+section:nth-child(odd) .img--hidden,
+section:nth-child(odd) .subtitle--hidden {
+	transform: translateX(-100%);
+}
+
+.img--visible,
+.subtitle--visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+@media screen and (max-width: 500px) {
+	section,
+	section:nth-child(odd) {
+		flex-direction: column;
+		text-align: center;
+	}
+}

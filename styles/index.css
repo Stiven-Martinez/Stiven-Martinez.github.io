@@ -1,9 +1,4 @@
-* {
-	box-sizing: border-box;
-}
-
 body {
-	margin: 0;
 	display: grid;
 	background-image: url('https://source.unsplash.com/random/?wallpaper');
 	background-repeat: no-repeat;
@@ -20,78 +15,9 @@ body::before {
 	content: '';
 }
 
-a {
-	text-decoration: none;
-}
-
-.menu {
-	position: fixed;
-	width: 100vw;
-	background-color: #555;
-	color: #fff;
-	font-family: 'Verdana', cursive;
-	z-index: 1;
-}
-
-.menu ul {
-	display: flex;
-	align-items: center;
-	margin: 0;
-	padding: 0 0.75rem;
-	font-size: 1.25rem;
-	list-style-type: none;
-}
-
-.menu a {
-	display: block;
-	font-size: 1rem;
-	text-align: center;
-	padding: 1rem 0.75rem;
-	color: inherit;
-	transition: background-color 0.25s;
-}
-
-.menu a:hover,
-.menu a:focus {
-	background-color: rgba(0, 0, 0, 0.3);
-}
-
-.menu-mobile {
-	transition: left 0.5s;
-}
-
-.menu-mobile ul {
-	position: relative;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	margin: 0;
-	padding: 0 0.75rem;
-	font-size: 1.25rem;
-	list-style-type: none;
-}
-
-.menu-mobile a {
-	width: 100vw;
-}
-
-.hide {
-	left: -100vw;
-}
-
-.show {
-	left: 0;
-}
-
-main {
-	padding: 1rem;
-}
-
 h1 {
-	font-family: 'Nabla', cursive;
-	text-align: center;
-	font-size: clamp(4rem, 5vw, 6rem);
-	user-select: none;
+	margin-top: 3.625rem;
+	padding-top: 3.625rem;
 }
 
 .items {
@@ -109,8 +35,10 @@ h1 {
 	aspect-ratio: 2 / 1;
 	border-radius: 1.2rem;
 	background-color: #fff;
-	font-family: 'Caesar Dressing', cursive;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 600;
 	font-size: 2.5rem;
+	text-transform: lowercase;
 	text-decoration: none;
 	color: inherit;
 }
@@ -131,7 +59,7 @@ h1 {
 
 	inset: 0;
 	opacity: 0;
-	filter: blur(0.4rem);
+	filter: blur(0.35rem);
 	transform: scale(1.1);
 	z-index: -1;
 
@@ -142,4 +70,11 @@ h1 {
 .item:hover::before {
 	opacity: 1;
 	background-position: 200% 200%;
+}
+
+@media screen and (max-width: 500px) {
+	h1 {
+		margin-top: 2.68rem;
+		padding: 0;
+	}
 }
