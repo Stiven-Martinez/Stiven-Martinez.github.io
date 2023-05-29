@@ -1,0 +1,130 @@
+.main__banner {
+	color: #fff;
+	background: var(--accent-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner__container {
+	display: grid;
+	grid-template-areas:
+		'slogan  img'
+		'buttons img';
+	align-items: center;
+	gap: 4rem 8rem;
+	margin: 4rem 2rem;
+}
+
+.banner__container h1 {
+	margin: 0;
+	font-size: 3.5rem;
+	text-align: left;
+}
+
+.banner__container h1 span {
+	display: block;
+}
+
+.banner__container p {
+	margin: 0;
+}
+
+.banner__slogan {
+	grid-area: slogan;
+}
+
+.banner__buttons {
+	grid-area: buttons;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem 1rem;
+}
+
+.banner__buttons .button--outline {
+	border: 1px solid #fff;
+}
+
+.banner__container img {
+	max-height: 16rem;
+	grid-area: img;
+	filter: drop-shadow(0 0 5rem var(--secondary-color));
+}
+
+.content__container {
+	display: grid;
+	grid-template-areas:
+		'info   img'
+		'button img';
+	align-items: center;
+	gap: 4rem 8rem;
+}
+
+.content__info {
+	grid-area: info;
+}
+
+.content__info h3 {
+	font-size: 2.5rem;
+	color: var(--accent-color);
+	margin: 1rem 0;
+}
+
+.content__info h3 span {
+	display: block;
+}
+
+.content__info p {
+	margin: 0;
+}
+
+.content__img {
+	grid-area: img;
+}
+
+.content__img img {
+	max-height: 16rem;
+}
+
+.content__button {
+	grid-area: button;
+}
+
+.content__button .button--outline {
+	border: 1px solid var(--text);
+}
+
+@media screen and (max-width: 800px) {
+	.banner__container {
+		grid-template-areas:
+			'slogan'
+			'buttons'
+			'img';
+		place-items: center;
+	}
+
+	.banner__slogan h1,
+	.banner__slogan p {
+		text-align: center;
+	}
+
+	.content__container {
+		grid-template-areas:
+			'info'
+			'button'
+			'img';
+		align-items: center;
+		gap: 4rem 8rem;
+	}
+
+	.content__img {
+		place-self: center;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.banner__container h1 {
+		font-size: 2.5rem;
+	}
+}

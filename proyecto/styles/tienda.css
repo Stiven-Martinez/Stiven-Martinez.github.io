@@ -1,0 +1,31 @@
+.content__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card .button--outline {
+	border: 1px solid var(--text);
+}
+
+.card h2 {
+	margin-bottom: 0;
+}
+
+.card h2 span {
+	display: block;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.card p {
+	color: var(--accent-color);
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 0;
+}
+
+.card img[alt='rompecabezas'] {
+	transform: rotate(90deg) translateX(-25%);
+}

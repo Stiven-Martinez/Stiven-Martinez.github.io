@@ -1,0 +1,116 @@
+header {
+	display: grid;
+	grid-template-areas: 'brand menu media';
+	align-items: center;
+	padding: 0 0.6rem;
+}
+
+.header__container-brand {
+	grid-area: brand;
+	margin-left: 1rem;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.header__container-brand a {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.header__container-brand h2 {
+	font-size: 1.5rem;
+	user-select: none;
+	text-align: center;
+}
+
+.header__container-brand .logo {
+	display: inline-block;
+	width: 4rem;
+}
+
+.header__menu {
+	grid-area: menu;
+}
+
+.menu__list {
+	display: flex;
+	justify-content: space-between;
+	transition: transform 500ms var(--timing-transition);
+}
+
+.header__menu a {
+	font-weight: 600;
+	transition: color var(--time-timing-transition);
+}
+
+.header__menu a:hover,
+.header__menu a:focus {
+	color: var(--yellow);
+}
+
+.header__container-media {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	grid-area: media;
+}
+
+.header__container-media i {
+	transition: color var(--time-timing-transition);
+}
+
+.header__container-media a:hover i[class$='facebook'],
+.header__container-media a:focus i[class$='facebook'] {
+	color: #1877f2;
+}
+
+.header__container-media a:hover i[class$='instagram'],
+.header__container-media a:focus i[class$='instagram'] {
+	color: hotpink;
+}
+
+@media screen and (max-width: 800px) {
+	header {
+		grid-template-areas: 'menu brand media';
+		position: relative;
+		justify-content: space-between;
+	}
+
+	.header__container-brand {
+		justify-content: center;
+		margin-left: 0;
+	}
+
+	.header__container-brand .logo {
+		display: none;
+	}
+
+	.menu__button {
+		display: inline-block;
+	}
+
+	.header__menu {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.menu__list {
+		position: absolute;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+		padding: 4rem 0;
+		top: 100%;
+		left: 0;
+		transform: translateX(-100%);
+		z-index: 1;
+		background-color: var(--purple);
+	}
+
+	.menu__list.active {
+		transform: translateX(0);
+	}
+}

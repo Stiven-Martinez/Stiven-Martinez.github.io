@@ -1,0 +1,59 @@
+.content__container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	gap: 2rem;
+}
+
+.content__container img {
+	max-height: 6rem;
+}
+
+.content__container h1::before {
+	content: '¿Aún tienes dudas?';
+	font-size: 1.2rem;
+}
+
+.content__desc {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.content__info {
+	display: flex;
+	flex-direction: column;
+	justify-self: flex-start;
+}
+
+.content__whatsapp {
+	display: flex;
+	gap: 0.5rem;
+	margin: 1rem 0;
+}
+
+.content__info a {
+	text-decoration: underline;
+}
+
+.content__info p .highlight {
+	display: block;
+}
+
+.content__form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	color: var(--accent-color);
+}
+
+.content__form input {
+	width: 100%;
+	border: 1px solid var(--accent-color);
+}
+
+.content__form button {
+	align-self: flex-end;
+}
