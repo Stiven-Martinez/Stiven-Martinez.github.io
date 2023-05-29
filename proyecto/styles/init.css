@@ -141,7 +141,7 @@ ul {
 .cards {
 	display: flex;
 	justify-content: center;
-	margin: var(--card-img-width) 0;
+	margin-top: var(--card-img-width);
 	gap: calc(var(--card-img-width) / 2 + 2rem);
 	flex-wrap: wrap;
 }
